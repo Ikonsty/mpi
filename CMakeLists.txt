@@ -65,6 +65,11 @@ add_executable(${PROJECT_NAME} main.cpp ${INCLUDES} ${SOURCES})
 #! Put path to your project headers
 target_include_directories(${PROJECT_NAME} PRIVATE options_parser)
 
+if(APPLE)
+        set(LibArchive_INCLUDE_DIR "/opt/homebrew/opt/libarchive/include")
+        set(ICU_INCLUDE_DIR "/opt/homebrew/opt/icu4c/include")
+        set(ICU_LIBRARY "/opt/homebrew/opt/icu4c/lib")
+endif()
 #! Add external packages
 # options_parser requires boost::program_options library
 
@@ -78,8 +83,8 @@ find_package(ICU REQUIRED COMPONENTS uc i18n)
 
 target_link_libraries(${PROJECT_NAME} Threads::Threads)
 target_include_directories(${PROJECT_NAME} PRIVATE ${Boost_INCLUDE_DIR} ${LibArchive_INCLUDE_DIR})
-target_link_libraries(${PROJECT_NAME} archive)
-target_link_libraries(${PROJECT_NAME} tbb)
+target_link_libraries(${PROJECT_NAME} LibArchive::LibArchive)
+target_link_libraries(${PROJECT_NAME} TBB::tbb)
 target_link_libraries(${PROJECT_NAME} Boost::program_options Boost::system Boost::locale)
 
 

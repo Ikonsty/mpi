@@ -1,0 +1,4 @@
+# ninja log v5
+0	332	1653218449709533242	CMakeFiles/lab5_mpi.dir/main.cpp.o	6a9b4b98f1fff357
+1	1002	1653218561158328411	CMakeFiles/lab5_mpi.dir/sources/parser.cpp.o	3d377f24af8d651c
+1002	1058	1653218561219494802	lab5_mpi	9ba4117394febc40

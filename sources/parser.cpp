@@ -3,6 +3,7 @@
 #include <fstream>
 #include <iterator>
 #include "../includes/parser.hpp"
+#include "../includes/errors.h"
 
 namespace po = boost::program_options;
 namespace sys = std::filesystem;
@@ -32,7 +33,7 @@ config_options_t::config_options_t() {
             ("delta_t", po::value<float>()->default_value(0.01),
              "delta_t")
             ("interval_t", po::value<size_t>()->default_value(10),
-             "interval_t")
+             "interval_t");
 }
 
 config_options_t::config_options_t(char *argv[]):
