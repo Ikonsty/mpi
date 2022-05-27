@@ -55,9 +55,16 @@ include(cmake/CompilerWarnings.cmake)
 # Project files, packages, libraries and so on
 ##########################################################
 
-set(INCLUDES includes/parser.hpp)
+set(INCLUDES includes/parser.hpp
+            includes/errors.h
+            includes/grid.hpp
+            includes/diff_scheme.hpp
+            includes/helper.hpp)
 
-set(SOURCES sources/parser.cpp)
+set(SOURCES sources/parser.cpp
+            sources/grid.cpp
+            sources/diff_scheme.cpp
+            sources/helper.cpp)
 
 #! Project main executable source compilation
 add_executable(${PROJECT_NAME} main.cpp ${INCLUDES} ${SOURCES})
@@ -65,28 +72,22 @@ add_executable(${PROJECT_NAME} main.cpp ${INCLUDES} ${SOURCES})
 #! Put path to your project headers
 target_include_directories(${PROJECT_NAME} PRIVATE options_parser)
 
-if(APPLE)
-        set(LibArchive_INCLUDE_DIR "/opt/homebrew/opt/libarchive/include")
-        set(ICU_INCLUDE_DIR "/opt/homebrew/opt/icu4c/include")
-        set(ICU_LIBRARY "/opt/homebrew/opt/icu4c/lib")
-endif()
 #! Add external packages
 # options_parser requires boost::program_options library
 
 find_package(LibArchive REQUIRED)
 set (Boost_USE_STATIC_LIBS OFF) # enable dynamic linking
 set (Boost_USE_MULTITHREAD ON)  # enable multithreading
-find_package(Boost 1.71.0 COMPONENTS program_options system locale REQUIRED)
+find_package(Boost 1.71.0 COMPONENTS program_options system locale mpi REQUIRED)
 find_package(Threads REQUIRED)
-find_package(TBB REQUIRED)
 find_package(ICU REQUIRED COMPONENTS uc i18n)
+
+include_directories(SYSTEM ${MPI_INCLUDE_PATH})
 
 target_link_libraries(${PROJECT_NAME} Threads::Threads)
 target_include_directories(${PROJECT_NAME} PRIVATE ${Boost_INCLUDE_DIR} ${LibArchive_INCLUDE_DIR})
-target_link_libraries(${PROJECT_NAME} LibArchive::LibArchive)
-target_link_libraries(${PROJECT_NAME} TBB::tbb)
-target_link_libraries(${PROJECT_NAME} Boost::program_options Boost::system Boost::locale)
-
+target_link_libraries(${PROJECT_NAME} archive)
+target_link_libraries(${PROJECT_NAME} Boost::program_options Boost::system Boost::locale Boost::mpi)
 
 ##########################################################
 # Fixed CMakeLists.txt part

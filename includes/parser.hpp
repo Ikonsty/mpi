@@ -3,6 +3,8 @@
 #include <boost/program_options.hpp>
 #include <filesystem>
 
+namespace sys = std::filesystem;
+
 class config_options_t
 {
 public:
@@ -22,19 +24,19 @@ public:
     boost::program_options::variables_map vm;
     boost::program_options::options_description config;
 
-    std::filesystem::path out_dir;
-    size_t n_threads;
-    float density;
-    float heat_capacity;
-    float x_start;
-    float x_end;
-    float y_start;
-    float y_end;
-    float delta_x;
-    float delta_y;
-    float delta_t;
+    double density;
+    double heat_capacity;
+    double therm_conduct;
+    double x_start;
+    double x_end;
+    double y_start;
+    double y_end;
+    double delta_x;
+    double delta_y;
+    double delta_t;
     size_t interval_t;
-
+    sys::path out_dir;
+    sys::path init_dir;
 };
 
 
