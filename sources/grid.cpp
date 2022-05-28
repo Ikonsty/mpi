@@ -3,6 +3,7 @@
 grid::grid(int n_col, int n_row)
     : n_col_(n_col),
       n_row_(n_row)
+
 {
     grid_.resize(n_col_ * n_row_);
 }

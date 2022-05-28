@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-c58162d19161ec0ff320.json",
+					"jsonFile" : "directory-.-Release-3d4693f254519b412f15.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -20,7 +20,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "Release",
 			"projects" : 
 			[
 				{
@@ -40,7 +40,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "lab5_mpi::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-lab5_mpi-Debug-2324b84825c7c60c3e72.json",
+					"jsonFile" : "target-lab5_mpi-Release-12c05ef7a6e2881819b3.json",
 					"name" : "lab5_mpi",
 					"projectIndex" : 0
 				}
@@ -50,7 +50,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/vladprotsenko/Documents/ACS/mpi/cmake-build-debug",
+		"build" : "/Users/vladprotsenko/Documents/ACS/mpi/cmake-build-release",
 		"source" : "/Users/vladprotsenko/Documents/ACS/mpi"
 	},
 	"version" : 

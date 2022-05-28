@@ -1,4 +1,7 @@
 # ninja log v5
-0	332	1653218449709533242	CMakeFiles/lab5_mpi.dir/main.cpp.o	6a9b4b98f1fff357
-1	1002	1653218561158328411	CMakeFiles/lab5_mpi.dir/sources/parser.cpp.o	3d377f24af8d651c
-1002	1058	1653218561219494802	lab5_mpi	9ba4117394febc40
+35	1362	1653665127850739899	CMakeFiles/lab5_mpi.dir/main.cpp.o	a064ca774d41feaf
+38	1124	1653665127615582766	CMakeFiles/lab5_mpi.dir/sources/helper.cpp.o	eff99246f388f3be
+36	1289	1653665127780721807	CMakeFiles/lab5_mpi.dir/sources/parser.cpp.o	4b5c5efd495091b2
+1362	1452	1653665127949883582	lab5_mpi	b2489b1e99f09e72
+37	1000	1653665127493426760	CMakeFiles/lab5_mpi.dir/sources/diff_scheme.cpp.o	38645e26f1fd5fbe
+37	554	1653665127047892436	CMakeFiles/lab5_mpi.dir/sources/grid.cpp.o	9d2438b524c0496c

@@ -35,6 +35,7 @@ public:
     double delta_y;
     double delta_t;
     size_t interval_t;
+    size_t total_time;
     sys::path out_dir;
     sys::path init_dir;
 };

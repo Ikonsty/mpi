@@ -32,6 +32,8 @@ config_options_t::config_options_t() {
              "delta_t")
             ("interval_t", po::value<size_t>()->default_value(10),
              "interval_t")
+            ("total_time", po::value<size_t>()->default_value(1000),
+             "total_time")
             ("out_dir", po::value<sys::path>()->default_value(""),
              "out_dir")
             ("init_dir", po::value<sys::path>()->default_value(""),
@@ -68,7 +70,8 @@ void config_options_t::parse(char *argv[]) {
         delta_x = vm["delta_x"].as<double>();
         delta_y = vm["delta_y"].as<double>();
         delta_t = vm["delta_t"].as<double>();
-        interval_t = vm["interval_t"].as<size_t>();        
+        interval_t = vm["interval_t"].as<size_t>();
+        total_time = vm["total_time"].as<size_t>();
         out_dir = vm["out_dir"].as<sys::path>();
         init_dir = vm["init_dir"].as<sys::path>();
 

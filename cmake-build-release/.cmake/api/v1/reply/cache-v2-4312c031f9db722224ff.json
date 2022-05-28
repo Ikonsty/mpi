@@ -42,6 +42,18 @@
 			"value" : "/opt/homebrew/lib/libboost_locale-mt.dylib"
 		},
 		{
+			"name" : "Boost_MPI_LIBRARY_RELEASE",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "STRING",
+			"value" : "/opt/homebrew/lib/libboost_mpi-mt.dylib"
+		},
+		{
 			"name" : "Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE",
 			"properties" : 
 			[
@@ -107,7 +119,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "Debug"
+			"value" : "Release"
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -119,7 +131,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/vladprotsenko/Documents/ACS/mpi/cmake-build-debug"
+			"value" : "/Users/vladprotsenko/Documents/ACS/mpi/cmake-build-release"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -1175,7 +1187,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "[/opt/homebrew/lib/cmake/Boost-1.78.0/BoostConfig.cmake][cfound components: program_options system locale ][v1.78.0(1.71.0)]"
+			"value" : "[/opt/homebrew/lib/cmake/Boost-1.78.0/BoostConfig.cmake][cfound components: program_options system locale mpi ][v1.78.0(1.71.0)]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_ICU",
@@ -1188,6 +1200,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "[/opt/homebrew/opt/icu4c/include][/opt/homebrew/opt/icu4c/lib][ON][v70.1()]"
+		},
+		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_ImageMagick",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding ImageMagick"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[/opt/homebrew/Cellar/imagemagick/7.1.0-33/lib/libMagick++-7.Q16HDRI.dylib][v7.1.0-33()]"
 		},
 		{
 			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_LibArchive",
@@ -1614,6 +1638,150 @@
 			"value" : "ICU_UC_LIBRARY_RELEASE-NOTFOUND"
 		},
 		{
+			"name" : "IMAGEMAGICK_BINARY_PATH",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to the ImageMagick binary directory."
+				}
+			],
+			"type" : "PATH",
+			"value" : "ImageMagick_EXECUTABLE_DIR-NOTFOUND"
+		},
+		{
+			"name" : "IMAGEMAGICK_COMPOSITE_EXECUTABLE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to ImageMagick's composite executable."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : ""
+		},
+		{
+			"name" : "IMAGEMAGICK_CONVERT_EXECUTABLE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to ImageMagick's convert executable."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : ""
+		},
+		{
+			"name" : "IMAGEMAGICK_IMPORT_EXECUTABLE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to ImageMagick's import executable."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : ""
+		},
+		{
+			"name" : "IMAGEMAGICK_MOGRIFY_EXECUTABLE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to ImageMagick's mogrify executable."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : ""
+		},
+		{
+			"name" : "IMAGEMAGICK_MONTAGE_EXECUTABLE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to ImageMagick's montage executable."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : ""
+		},
+		{
+			"name" : "ImageMagick_EXECUTABLE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to the ImageMagick binary directory."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/opt/homebrew/bin"
+		},
+		{
+			"name" : "ImageMagick_Magick++_ARCH_INCLUDE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to the ImageMagick arch-specific include dir."
+				}
+			],
+			"type" : "PATH",
+			"value" : "ImageMagick_Magick++_ARCH_INCLUDE_DIR-NOTFOUND"
+		},
+		{
+			"name" : "ImageMagick_Magick++_INCLUDE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to the ImageMagick arch-independent include dir."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/opt/homebrew/Cellar/imagemagick/7.1.0-33/include/ImageMagick-7"
+		},
+		{
+			"name" : "ImageMagick_Magick++_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to the ImageMagick Magick++ library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/opt/homebrew/Cellar/imagemagick/7.1.0-33/lib/libMagick++-7.Q16HDRI.dylib"
+		},
+		{
 			"name" : "LibArchive_INCLUDE_DIR",
 			"properties" : 
 			[
@@ -1646,6 +1814,862 @@
 			"value" : "/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/usr/lib/libarchive.tbd"
 		},
 		{
+			"name" : "MPIEXEC_EXECUTABLE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Executable for running MPI programs."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/opt/homebrew/bin/mpiexec"
+		},
+		{
+			"name" : "MPIEXEC_MAX_NUMPROCS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Maximum number of processors available to run MPI applications."
+				}
+			],
+			"type" : "STRING",
+			"value" : "8"
+		},
+		{
+			"name" : "MPIEXEC_NUMPROC_FLAG",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Flag used by MPI to specify the number of processes for mpiexec; the next option will be the number of processes."
+				}
+			],
+			"type" : "STRING",
+			"value" : "-n"
+		},
+		{
+			"name" : "MPIEXEC_POSTFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "These flags will be placed after all flags passed to mpiexec."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "MPIEXEC_PREFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "These flags will be directly before the executable that is being run by mpiexec."
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "MPI_CXX_ADDITIONAL_INCLUDE_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "MPI CXX additional include directories"
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "MPI_CXX_COMPILER",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "MPI compiler for CXX"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/opt/homebrew/bin/mpicxx"
+		},
+		{
+			"name" : "MPI_CXX_COMPILER_INCLUDE_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "MPI CXX compiler wrapper include directories"
+				}
+			],
+			"type" : "STRING",
+			"value" : "/opt/homebrew/Cellar/open-mpi/4.1.3/include"
+		},
+		{
+			"name" : "MPI_CXX_COMPILE_DEFINITIONS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "MPI CXX compilation definitions"
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "MPI_CXX_COMPILE_OPTIONS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "MPI CXX compilation options"
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "MPI_CXX_HEADER_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a file."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/opt/homebrew/Cellar/open-mpi/4.1.3/include"
+		},
+		{
+			"name" : "MPI_CXX_LIB_NAMES",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "MPI CXX libraries to link against"
+				}
+			],
+			"type" : "STRING",
+			"value" : "mpi"
+		},
+		{
+			"name" : "MPI_CXX_LINK_FLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "MPI CXX linker flags"
+				}
+			],
+			"type" : "STRING",
+			"value" : "-L/opt/homebrew/Cellar/libevent/2.1.12/lib"
+		},
+		{
+			"name" : "MPI_CXX_SKIP_MPICXX",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "If true, the MPI-2 C++ bindings are disabled using definitions."
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
+			"name" : "MPI_C_ADDITIONAL_INCLUDE_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "MPI C additional include directories"
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "MPI_C_COMPILER",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "MPI compiler for C"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/opt/homebrew/bin/mpicc"
+		},
+		{
+			"name" : "MPI_C_COMPILER_INCLUDE_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "MPI C compiler wrapper include directories"
+				}
+			],
+			"type" : "STRING",
+			"value" : "/opt/homebrew/Cellar/open-mpi/4.1.3/include"
+		},
+		{
+			"name" : "MPI_C_COMPILE_DEFINITIONS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "MPI C compilation definitions"
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "MPI_C_COMPILE_OPTIONS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "MPI C compilation options"
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "MPI_C_HEADER_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a file."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/opt/homebrew/Cellar/open-mpi/4.1.3/include"
+		},
+		{
+			"name" : "MPI_C_LIB_NAMES",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "MPI C libraries to link against"
+				}
+			],
+			"type" : "STRING",
+			"value" : "mpi"
+		},
+		{
+			"name" : "MPI_C_LINK_FLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "MPI C linker flags"
+				}
+			],
+			"type" : "STRING",
+			"value" : "-L/opt/homebrew/Cellar/libevent/2.1.12/lib"
+		},
+		{
+			"name" : "MPI_RESULT_CXX_test_mpi_MPICXX",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Result of TRY_COMPILE"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
+		},
+		{
+			"name" : "MPI_RESULT_CXX_test_mpi_normal",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Result of TRY_COMPILE"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
+		},
+		{
+			"name" : "MPI_RESULT_C_test_mpi_normal",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Result of TRY_COMPILE"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
+		},
+		{
+			"name" : "MPI_mpi_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Location of the mpi library for MPI"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/opt/homebrew/Cellar/open-mpi/4.1.3/lib/libmpi.dylib"
+		},
+		{
+			"name" : "PC_Magick++_CFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-Xpreprocessor;-fopenmp;-DMAGICKCORE_HDRI_ENABLE=1;-DMAGICKCORE_QUANTUM_DEPTH=16;-Xpreprocessor;-fopenmp;-DMAGICKCORE_HDRI_ENABLE=1;-DMAGICKCORE_QUANTUM_DEPTH=16;-Xpreprocessor;-fopenmp;-DMAGICKCORE_HDRI_ENABLE=1;-DMAGICKCORE_QUANTUM_DEPTH=16;-I/opt/homebrew/Cellar/imagemagick/7.1.0-33/include/ImageMagick-7"
+		},
+		{
+			"name" : "PC_Magick++_CFLAGS_I",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_CFLAGS_OTHER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-Xpreprocessor;-fopenmp;-DMAGICKCORE_HDRI_ENABLE=1;-DMAGICKCORE_QUANTUM_DEPTH=16;-Xpreprocessor;-fopenmp;-DMAGICKCORE_HDRI_ENABLE=1;-DMAGICKCORE_QUANTUM_DEPTH=16;-Xpreprocessor;-fopenmp;-DMAGICKCORE_HDRI_ENABLE=1;-DMAGICKCORE_QUANTUM_DEPTH=16"
+		},
+		{
+			"name" : "PC_Magick++_FOUND",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
+		},
+		{
+			"name" : "PC_Magick++_INCLUDEDIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/opt/homebrew/Cellar/imagemagick/7.1.0-33/include/ImageMagick-7"
+		},
+		{
+			"name" : "PC_Magick++_INCLUDE_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/opt/homebrew/Cellar/imagemagick/7.1.0-33/include/ImageMagick-7"
+		},
+		{
+			"name" : "PC_Magick++_LDFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-L/opt/homebrew/Cellar/imagemagick/7.1.0-33/lib;-lMagick++-7.Q16HDRI;-lMagickWand-7.Q16HDRI;-lMagickCore-7.Q16HDRI"
+		},
+		{
+			"name" : "PC_Magick++_LDFLAGS_OTHER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_LIBDIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/opt/homebrew/Cellar/imagemagick/7.1.0-33/lib"
+		},
+		{
+			"name" : "PC_Magick++_LIBRARIES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "Magick++-7.Q16HDRI;MagickWand-7.Q16HDRI;MagickCore-7.Q16HDRI"
+		},
+		{
+			"name" : "PC_Magick++_LIBRARY_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/opt/homebrew/Cellar/imagemagick/7.1.0-33/lib"
+		},
+		{
+			"name" : "PC_Magick++_LIBS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_LIBS_L",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_LIBS_OTHER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_LIBS_PATHS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_MODULE_NAME",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "Magick++"
+		},
+		{
+			"name" : "PC_Magick++_Magick++_INCLUDEDIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_Magick++_LIBDIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_Magick++_PREFIX",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_Magick++_VERSION",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_PREFIX",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/opt/homebrew/Cellar/imagemagick/7.1.0-33"
+		},
+		{
+			"name" : "PC_Magick++_STATIC_CFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-Xpreprocessor;-fopenmp;-DMAGICKCORE_HDRI_ENABLE=1;-DMAGICKCORE_QUANTUM_DEPTH=16;-Xpreprocessor;-fopenmp;-DMAGICKCORE_HDRI_ENABLE=1;-DMAGICKCORE_QUANTUM_DEPTH=16;-Xpreprocessor;-fopenmp;-DMAGICKCORE_HDRI_ENABLE=1;-DMAGICKCORE_QUANTUM_DEPTH=16;-I/opt/homebrew/Cellar/imagemagick/7.1.0-33/include/ImageMagick-7"
+		},
+		{
+			"name" : "PC_Magick++_STATIC_CFLAGS_I",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_STATIC_CFLAGS_OTHER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-Xpreprocessor;-fopenmp;-DMAGICKCORE_HDRI_ENABLE=1;-DMAGICKCORE_QUANTUM_DEPTH=16;-Xpreprocessor;-fopenmp;-DMAGICKCORE_HDRI_ENABLE=1;-DMAGICKCORE_QUANTUM_DEPTH=16;-Xpreprocessor;-fopenmp;-DMAGICKCORE_HDRI_ENABLE=1;-DMAGICKCORE_QUANTUM_DEPTH=16"
+		},
+		{
+			"name" : "PC_Magick++_STATIC_INCLUDE_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/opt/homebrew/Cellar/imagemagick/7.1.0-33/include/ImageMagick-7"
+		},
+		{
+			"name" : "PC_Magick++_STATIC_LDFLAGS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "-L/opt/homebrew/Cellar/imagemagick/7.1.0-33/lib;-L/opt/homebrew/Cellar/little-cms2/2.13.1/lib;-L/opt/homebrew/opt/freetype/lib;-L/opt/homebrew/Cellar/glib/2.72.1/lib;-L/opt/homebrew/opt/gettext/lib;-L/opt/homebrew/opt/freetype/lib;-L/opt/homebrew/Cellar/fontconfig/2.14.0/lib;-L/opt/homebrew/Cellar/imagemagick/7.1.0-33/lib;-L/opt/homebrew/Cellar/little-cms2/2.13.1/lib;-L/opt/homebrew/opt/freetype/lib;-L/opt/homebrew/Cellar/glib/2.72.1/lib;-L/opt/homebrew/opt/gettext/lib;-L/opt/homebrew/opt/freetype/lib;-L/opt/homebrew/Cellar/fontconfig/2.14.0/lib;-lMagick++-7.Q16HDRI;-lm;-lMagickWand-7.Q16HDRI;-llcms2;-lfreetype;-llqr-1;-lglib-2.0;-lintl;-lxml2;-lfontconfig;-lfreetype;-lbz2;-lz;-lltdl;-lm;-lpthread;-lm;-lMagickCore-7.Q16HDRI;-llcms2;-lfreetype;-llqr-1;-lglib-2.0;-lintl;-lxml2;-lfontconfig;-lfreetype;-lbz2;-lz;-lltdl;-lm;-lpthread;-lm"
+		},
+		{
+			"name" : "PC_Magick++_STATIC_LDFLAGS_OTHER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_STATIC_LIBDIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_STATIC_LIBRARIES",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "Magick++-7.Q16HDRI;m;MagickWand-7.Q16HDRI;lcms2;freetype;lqr-1;glib-2.0;intl;xml2;fontconfig;freetype;bz2;z;ltdl;m;pthread;m;MagickCore-7.Q16HDRI;lcms2;freetype;lqr-1;glib-2.0;intl;xml2;fontconfig;freetype;bz2;z;ltdl;m;pthread;m"
+		},
+		{
+			"name" : "PC_Magick++_STATIC_LIBRARY_DIRS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/opt/homebrew/Cellar/imagemagick/7.1.0-33/lib;/opt/homebrew/Cellar/little-cms2/2.13.1/lib;/opt/homebrew/opt/freetype/lib;/opt/homebrew/Cellar/glib/2.72.1/lib;/opt/homebrew/opt/gettext/lib;/opt/homebrew/opt/freetype/lib;/opt/homebrew/Cellar/fontconfig/2.14.0/lib;/opt/homebrew/Cellar/imagemagick/7.1.0-33/lib;/opt/homebrew/Cellar/little-cms2/2.13.1/lib;/opt/homebrew/opt/freetype/lib;/opt/homebrew/Cellar/glib/2.72.1/lib;/opt/homebrew/opt/gettext/lib;/opt/homebrew/opt/freetype/lib;/opt/homebrew/Cellar/fontconfig/2.14.0/lib"
+		},
+		{
+			"name" : "PC_Magick++_STATIC_LIBS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_STATIC_LIBS_L",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_STATIC_LIBS_OTHER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_STATIC_LIBS_PATHS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "PC_Magick++_VERSION",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "7.1.0"
+		},
+		{
+			"name" : "PKG_CONFIG_ARGN",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Arguments to supply to pkg-config"
+				}
+			],
+			"type" : "STRING",
+			"value" : ""
+		},
+		{
+			"name" : "PKG_CONFIG_EXECUTABLE",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "pkg-config executable"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/opt/homebrew/bin/pkg-config"
+		},
+		{
 			"name" : "TBB_DIR",
 			"properties" : 
 			[
@@ -1672,6 +2696,30 @@
 			],
 			"type" : "UNINITIALIZED",
 			"value" : ""
+		},
+		{
+			"name" : "__pkg_config_arguments_PC_Magick++",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "QUIET;Magick++"
+		},
+		{
+			"name" : "__pkg_config_checked_PC_Magick++",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "1"
 		},
 		{
 			"name" : "boost_chrono_DIR",
@@ -1722,6 +2770,22 @@
 			"value" : "/opt/homebrew/lib/cmake/boost_locale-1.78.0"
 		},
 		{
+			"name" : "boost_mpi_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for boost_mpi."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/opt/homebrew/lib/cmake/boost_mpi-1.78.0"
+		},
+		{
 			"name" : "boost_program_options_DIR",
 			"properties" : 
 			[
@@ -1736,6 +2800,22 @@
 			],
 			"type" : "PATH",
 			"value" : "/opt/homebrew/lib/cmake/boost_program_options-1.78.0"
+		},
+		{
+			"name" : "boost_serialization_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for boost_serialization."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/opt/homebrew/lib/cmake/boost_serialization-1.78.0"
 		},
 		{
 			"name" : "boost_system_DIR",
@@ -1779,7 +2859,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/vladprotsenko/Documents/ACS/mpi/cmake-build-debug"
+			"value" : "/Users/vladprotsenko/Documents/ACS/mpi/cmake-build-release"
 		},
 		{
 			"name" : "lab5_mpi_IS_TOP_LEVEL",
@@ -1804,6 +2884,66 @@
 			],
 			"type" : "STATIC",
 			"value" : "/Users/vladprotsenko/Documents/ACS/mpi"
+		},
+		{
+			"name" : "pkgcfg_lib_PC_Magick++_Magick++-7.Q16HDRI",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/opt/homebrew/Cellar/imagemagick/7.1.0-33/lib/libMagick++-7.Q16HDRI.dylib"
+		},
+		{
+			"name" : "pkgcfg_lib_PC_Magick++_MagickCore-7.Q16HDRI",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/opt/homebrew/Cellar/imagemagick/7.1.0-33/lib/libMagickCore-7.Q16HDRI.dylib"
+		},
+		{
+			"name" : "pkgcfg_lib_PC_Magick++_MagickWand-7.Q16HDRI",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Path to a library."
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "/opt/homebrew/Cellar/imagemagick/7.1.0-33/lib/libMagickWand-7.Q16HDRI.dylib"
+		},
+		{
+			"name" : "prefix_result",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : ""
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "/opt/homebrew/Cellar/imagemagick/7.1.0-33/lib"
 		}
 	],
 	"kind" : "cache",
