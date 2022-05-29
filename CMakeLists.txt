@@ -75,6 +75,9 @@ target_include_directories(${PROJECT_NAME} PRIVATE options_parser)
 #! Add external packages
 # options_parser requires boost::program_options library
 
+set (MAGICKCORE_QUANTUM_DEPTH, 16)
+
+find_package(ImageMagick COMPONENTS Magick++ REQUIRED)
 find_package(LibArchive REQUIRED)
 set (Boost_USE_STATIC_LIBS OFF) # enable dynamic linking
 set (Boost_USE_MULTITHREAD ON)  # enable multithreading
@@ -82,6 +85,8 @@ find_package(Boost 1.71.0 COMPONENTS program_options system locale mpi REQUIRED)
 find_package(Threads REQUIRED)
 find_package(ICU REQUIRED COMPONENTS uc i18n)
 
+include_directories(${ImageMagick_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} ${ImageMagick_LIBRARIES})
 include_directories(SYSTEM ${MPI_INCLUDE_PATH})
 
 target_link_libraries(${PROJECT_NAME} Threads::Threads)

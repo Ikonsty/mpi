@@ -56,3 +56,13 @@ std::pair<std::pair<int, int>, std::vector<double>> read_initial_t(sys::path fil
         return std::make_pair(std::make_pair(my_chunk_size, n_row), chunk);
 
 }
+
+std::vector<size_t> convert_to_rgb(double temp) {
+    double range = 100;
+    double alpha = (range - (temp + 50))/range;
+    std::vector<size_t> rgb(3);
+    rgb[0] = alpha*127 + (1 - alpha)*255; //red
+    rgb[1] = alpha*127 + (1 - alpha)*127; //green
+    rgb[2] = alpha*255 + (1 - alpha)*127; //blue
+    return rgb;
+}

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <boost/serialization/access.hpp>
 
 class grid
 {
@@ -29,8 +30,16 @@ public:
 
     void print();
 
+    template<class Archive>
+    void serialize(Archive & ar, const unsigned int version)
+    {
+        ar & grid_;
+        ar & n_col_;
+        ar & n_row_;
+    }
 
 private:
+    friend class boost::serialization::access;
     std::vector<double> grid_;
     size_t n_col_;
     size_t n_row_;
